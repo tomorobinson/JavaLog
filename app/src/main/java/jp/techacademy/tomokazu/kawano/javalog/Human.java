@@ -7,14 +7,10 @@ public class Human extends Animal implements Thinkable {
     // メンバ変数
     String hobby;
 
-    // コンストラクタ sayメソッド用
-    public Human(String name, int age) {
+    // コンストラクタ
+    public Human(String name, int age, String hobby) {
         this.name = name;
         this.age = age;
-    }
-
-    // コンストラクタ thinkメソッド用
-    public Human(String hobby) {
         this.hobby = hobby;
     }
 
@@ -27,6 +23,6 @@ public class Human extends Animal implements Thinkable {
     // メンバ関数
     @Override
     public void think(){
-        Log.d("javatest", "私は" + hobby + "について考える");
+        Log.d("javatest", "私は" + this.hobby + "について考える");
     }
 }
